@@ -3,190 +3,611 @@ import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				NexLabs under construction
-			</h1>
-			<section id="links">
-				<a class="button" href="https://github.com/NexLabs-Tech">GitHub</a>
-				
-			</section>
-		</section>
-	</main>
+<div id="canvas-container"></div>
 
-	
+<div class="container">
+	<nav>
+		<div class="logo">NexLabs</div>
+		<ul class="nav-links">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#services">Solutions</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<section class="hero">
+		<div class="floating-shapes">
+			<div class="shape">◆</div>
+			<div class="shape">●</div>
+			<div class="shape">▲</div>
+		</div>
+		<h1>The Future is Now</h1>
+		<p>Revolutionary tech solutions that transform possibilities into reality. Experience the next generation of innovation.</p>
+		<a href="#services" class="cta-button">Explore Solutions</a>
+	</section>
+
+	<section class="services" id="services">
+		<h2>Next-Gen Solutions</h2>
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">🚀</div>
+				<h3>AI & Machine Learning</h3>
+				<p>Harness the power of artificial intelligence to automate processes, predict outcomes, and unlock insights from your data like never before.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🌐</div>
+				<h3>Cloud Architecture</h3>
+				<p>Build scalable, secure, and resilient cloud infrastructure that grows with your business and adapts to changing demands.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">⚡</div>
+				<h3>Quantum Computing</h3>
+				<p>Pioneer the quantum revolution with cutting-edge quantum algorithms and computing solutions for complex problem-solving.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🔒</div>
+				<h3>Cybersecurity</h3>
+				<p>Protect your digital assets with advanced security protocols, threat detection, and zero-trust architecture implementations.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🎯</div>
+				<h3>IoT Solutions</h3>
+				<p>Connect, monitor, and optimize your devices with intelligent IoT ecosystems that deliver real-time insights and control.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">💎</div>
+				<h3>Blockchain</h3>
+				<p>Implement distributed ledger technologies for transparent, secure, and decentralized solutions across industries.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="stats">
+		<div class="stats-grid">
+			<div class="stat-item">
+				<div class="stat-number">500+</div>
+				<div class="stat-label">Projects Delivered</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-number">50M+</div>
+				<div class="stat-label">Data Points Processed</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-number">99.9%</div>
+				<div class="stat-label">Uptime Guarantee</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-number">24/7</div>
+				<div class="stat-label">Support Available</div>
+			</div>
+		</div>
+	</section>
 </div>
 
+<footer>
+	<div class="container">
+		<div class="footer-content">
+			<p>&copy; 2025 NexLabs. Shaping Tomorrow's Technology Today.</p>
+		</div>
+	</div>
+</footer>
+
 <style>
-	#background {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+		background: #0a0a0a;
+		color: #ffffff;
+		overflow-x: hidden;
+		line-height: 1.6;
+	}
+
+	#canvas-container {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		filter: blur(100px);
 	}
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: relative;
+		z-index: 1;
 	}
 
-	main {
-		height: 100%;
+	nav {
 		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
+		padding: 20px 0;
+		backdrop-filter: blur(20px);
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 15px;
+		margin: 20px 0;
+		padding: 15px 30px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+	.logo {
+		font-size: 28px;
+		font-weight: 800;
+		background: linear-gradient(135deg, #00f5ff, #ff0080, #ffaa00);
+		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
+		letter-spacing: -1px;
 	}
 
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
+	.nav-links {
+		display: flex;
+		gap: 30px;
+		list-style: none;
 	}
 
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
+	.nav-links a {
+		color: rgba(255, 255, 255, 0.8);
 		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
+		font-weight: 500;
+		transition: all 0.3s ease;
+		position: relative;
 	}
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
+	.nav-links a:hover {
+		color: #00f5ff;
+		transform: translateY(-2px);
 	}
 
-	@media screen and (max-height: 368px) {
-		#news {
+	.hero {
+		text-align: center;
+		padding: 100px 0 150px;
+		position: relative;
+	}
+
+	.hero h1 {
+		font-size: clamp(3rem, 8vw, 7rem);
+		font-weight: 900;
+		margin-bottom: 30px;
+		background: linear-gradient(135deg, #ffffff, #00f5ff, #ffffff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		line-height: 1.1;
+		letter-spacing: -3px;
+		animation: glow 3s ease-in-out infinite alternate;
+	}
+
+	@keyframes glow {
+		from { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.3)); }
+		to { filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.6)); }
+	}
+
+	.hero p {
+		font-size: 1.5rem;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 50px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 300;
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 18px 40px;
+		background: linear-gradient(135deg, #ff0080, #00f5ff, #ffaa00);
+		border: none;
+		border-radius: 50px;
+		color: white;
+		font-size: 1.1rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all 0.4s ease;
+		position: relative;
+		overflow: hidden;
+		backdrop-filter: blur(10px);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-5px) scale(1.05);
+		box-shadow: 0 20px 40px rgba(255, 0, 128, 0.3);
+	}
+
+	.cta-button::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+		transition: left 0.6s;
+	}
+
+	.cta-button:hover::before {
+		left: 100%;
+	}
+
+	.services {
+		padding: 100px 0;
+		position: relative;
+	}
+
+	.services h2 {
+		text-align: center;
+		font-size: 3.5rem;
+		font-weight: 800;
+		margin-bottom: 80px;
+		background: linear-gradient(135deg, #ffffff, #00f5ff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 40px;
+	}
+
+	.service-card {
+		backdrop-filter: blur(20px);
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 20px;
+		padding: 40px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: all 0.4s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.service-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #ff0080, #00f5ff, #ffaa00);
+		transform: scaleX(0);
+		transition: transform 0.4s ease;
+	}
+
+	.service-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.service-card:hover {
+		transform: translateY(-10px);
+		background: rgba(255, 255, 255, 0.08);
+		box-shadow: 0 20px 40px rgba(0, 245, 255, 0.1);
+	}
+
+	.service-icon {
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(135deg, #ff0080, #00f5ff);
+		border-radius: 15px;
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 24px;
+	}
+
+	.service-card h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 15px;
+		color: #ffffff;
+	}
+
+	.service-card p {
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1.6;
+	}
+
+	.stats {
+		padding: 100px 0;
+		text-align: center;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 40px;
+	}
+
+	.stat-item {
+		backdrop-filter: blur(20px);
+		background: rgba(255, 255, 255, 0.03);
+		border-radius: 20px;
+		padding: 40px 20px;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		transition: all 0.3s ease;
+	}
+
+	.stat-item:hover {
+		transform: translateY(-5px);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: 900;
+		background: linear-gradient(135deg, #00f5ff, #ff0080);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-bottom: 10px;
+	}
+
+	.stat-label {
+		color: rgba(255, 255, 255, 0.8);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+	}
+
+	.floating-shapes {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.shape {
+		position: absolute;
+		opacity: 0.1;
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.shape:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+	.shape:nth-child(2) { top: 60%; right: 10%; animation-delay: 2s; }
+	.shape:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 4s; }
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		50% { transform: translateY(-20px) rotate(10deg); }
+	}
+
+	footer {
+		text-align: center;
+		padding: 60px 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		margin-top: 100px;
+	}
+
+	.footer-content {
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
 			display: none;
 		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
+		
+		.hero {
+			padding: 60px 0 100px;
 		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
+		
+		.services, .stats {
+			padding: 60px 0;
 		}
 	}
 </style>
+
+<script>
+	// Three.js Scene Setup
+	let scene, camera, renderer, particles;
+	let mouseX = 0, mouseY = 0;
+	
+	async function loadThreeJS() {
+		// Dynamically import Three.js
+		const THREE = await import('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js');
+		return THREE;
+	}
+	
+	async function init() {
+		const THREE = await loadThreeJS();
+		const container = document.getElementById('canvas-container');
+		
+		if (!container) return;
+		
+		scene = new THREE.Scene();
+		camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+		
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setClearColor(0x000000, 0);
+		container.appendChild(renderer.domElement);
+		
+		// Create particle system
+		createParticles(THREE);
+		
+		// Create floating geometric shapes
+		createFloatingShapes(THREE);
+		
+		camera.position.z = 50;
+		
+		// Mouse interaction
+		document.addEventListener('mousemove', onMouseMove);
+		window.addEventListener('resize', () => onWindowResize(THREE));
+		
+		animate(THREE);
+	}
+	
+	function createParticles(THREE) {
+		const geometry = new THREE.BufferGeometry();
+		const vertices = [];
+		
+		for (let i = 0; i < 2000; i++) {
+			vertices.push(
+				Math.random() * 200 - 100,
+				Math.random() * 200 - 100,
+				Math.random() * 200 - 100
+			);
+		}
+		
+		geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+		
+		const material = new THREE.PointsMaterial({
+			color: 0x00f5ff,
+			size: 0.5,
+			transparent: true,
+			opacity: 0.6,
+			blending: THREE.AdditiveBlending
+		});
+		
+		particles = new THREE.Points(geometry, material);
+		scene.add(particles);
+	}
+	
+	function createFloatingShapes(THREE) {
+		// Create various geometric shapes
+		const geometries = [
+			new THREE.TetrahedronGeometry(2),
+			new THREE.OctahedronGeometry(1.5),
+			new THREE.IcosahedronGeometry(1.8),
+			new THREE.DodecahedronGeometry(1.2)
+		];
+		
+		const materials = [
+			new THREE.MeshBasicMaterial({ 
+				color: 0xff0080, 
+				wireframe: true, 
+				transparent: true, 
+				opacity: 0.3 
+			}),
+			new THREE.MeshBasicMaterial({ 
+				color: 0x00f5ff, 
+				wireframe: true, 
+				transparent: true, 
+				opacity: 0.3 
+			}),
+			new THREE.MeshBasicMaterial({ 
+				color: 0xffaa00, 
+				wireframe: true, 
+				transparent: true, 
+				opacity: 0.3 
+			})
+		];
+		
+		for (let i = 0; i < 15; i++) {
+			const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+			const material = materials[Math.floor(Math.random() * materials.length)];
+			const mesh = new THREE.Mesh(geometry, material);
+			
+			mesh.position.set(
+				Math.random() * 100 - 50,
+				Math.random() * 100 - 50,
+				Math.random() * 50 - 25
+			);
+			
+			mesh.rotation.set(
+				Math.random() * Math.PI,
+				Math.random() * Math.PI,
+				Math.random() * Math.PI
+			);
+			
+			mesh.userData = {
+				rotationSpeed: {
+					x: (Math.random() - 0.5) * 0.02,
+					y: (Math.random() - 0.5) * 0.02,
+					z: (Math.random() - 0.5) * 0.02
+				}
+			};
+			
+			scene.add(mesh);
+		}
+	}
+	
+	function onMouseMove(event) {
+		mouseX = (event.clientX - window.innerWidth / 2) * 0.0005;
+		mouseY = (event.clientY - window.innerHeight / 2) * 0.0005;
+	}
+	
+	function onWindowResize(THREE) {
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+	}
+	
+	function animate(THREE) {
+		requestAnimationFrame(() => animate(THREE));
+		
+		// Rotate particles
+		if (particles) {
+			particles.rotation.x += 0.0005;
+			particles.rotation.y += 0.001;
+		}
+		
+		// Mouse interaction with camera
+		camera.position.x += (mouseX * 10 - camera.position.x) * 0.05;
+		camera.position.y += (-mouseY * 10 - camera.position.y) * 0.05;
+		camera.lookAt(scene.position);
+		
+		// Animate geometric shapes
+		scene.traverse((object) => {
+			if (object.userData && object.userData.rotationSpeed) {
+				object.rotation.x += object.userData.rotationSpeed.x;
+				object.rotation.y += object.userData.rotationSpeed.y;
+				object.rotation.z += object.userData.rotationSpeed.z;
+			}
+		});
+		
+		renderer.render(scene, camera);
+	}
+	
+	// Smooth scrolling for navigation
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			}
+		});
+	});
+	
+	// Initialize Three.js when page loads
+	document.addEventListener('DOMContentLoaded', init);
+	
+	// Add scroll animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+	
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.style.opacity = '1';
+				entry.target.style.transform = 'translateY(0)';
+			}
+		});
+	}, observerOptions);
+	
+	// Observe service cards for scroll animations
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.service-card, .stat-item').forEach(el => {
+			el.style.opacity = '0';
+			el.style.transform = 'translateY(20px)';
+			el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+			observer.observe(el);
+		});
+	});
+</script>
