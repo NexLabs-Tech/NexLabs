@@ -1,6 +1,5 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+// NexLabs.astro - Disruptive Tech Solutions Landing Page
 ---
 
 <div id="canvas-container"></div>
@@ -11,7 +10,6 @@ import background from '../assets/background.svg';
 		<ul class="nav-links">
 			<li><a href="#home">Home</a></li>
 			<li><a href="#services">Solutions</a></li>
-			<li><a href="#about">About</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
@@ -31,34 +29,34 @@ import background from '../assets/background.svg';
 		<h2>Next-Gen Solutions</h2>
 		<div class="services-grid">
 			<div class="service-card">
-				<div class="service-icon">🚀</div>
-				<h3>AI & Machine Learning</h3>
-				<p>Harness the power of artificial intelligence to automate processes, predict outcomes, and unlock insights from your data like never before.</p>
-			</div>
-			<div class="service-card">
 				<div class="service-icon">🌐</div>
-				<h3>Cloud Architecture</h3>
-				<p>Build scalable, secure, and resilient cloud infrastructure that grows with your business and adapts to changing demands.</p>
+				<h3>WebPages</h3>
+				<p>Stunning, responsive websites that captivate your audience with cutting-edge design and seamless user experiences across all devices.</p>
 			</div>
 			<div class="service-card">
-				<div class="service-icon">⚡</div>
-				<h3>Quantum Computing</h3>
-				<p>Pioneer the quantum revolution with cutting-edge quantum algorithms and computing solutions for complex problem-solving.</p>
+				<div class="service-icon">🤖</div>
+				<h3>AI Machine Learning Bot Automation</h3>
+				<p>Intelligent chatbots and automation systems powered by advanced AI to streamline operations and enhance customer interactions.</p>
+			</div>	
+			<div class="service-card">
+				<div class="service-icon">🛍️</div>
+				<h3>Store Developments</h3>
+				<p>Complete e-commerce solutions with advanced features, payment integration, and inventory management for your online business.</p>
 			</div>
 			<div class="service-card">
-				<div class="service-icon">🔒</div>
-				<h3>Cybersecurity</h3>
-				<p>Protect your digital assets with advanced security protocols, threat detection, and zero-trust architecture implementations.</p>
+				<div class="service-icon">⚙️</div>
+				<h3>Custom Software</h3>
+				<p>Bespoke software solutions tailored to your specific business needs, built with modern technologies and scalable architecture.</p>
 			</div>
 			<div class="service-card">
-				<div class="service-icon">🎯</div>
-				<h3>IoT Solutions</h3>
-				<p>Connect, monitor, and optimize your devices with intelligent IoT ecosystems that deliver real-time insights and control.</p>
+				<div class="service-icon">📱</div>
+				<h3>Mobile Apps</h3>
+				<p>Native and cross-platform mobile applications that deliver exceptional performance and user engagement on iOS and Android.</p>
 			</div>
 			<div class="service-card">
-				<div class="service-icon">💎</div>
-				<h3>Blockchain</h3>
-				<p>Implement distributed ledger technologies for transparent, secure, and decentralized solutions across industries.</p>
+				<div class="service-icon">🚀</div>
+				<h3>Computer Vision</h3>
+				<p>Advanced image and video analysis solutions that leverage deep learning for object detection, recognition, and tracking.</p>
 			</div>
 		</div>
 	</section>
@@ -82,6 +80,34 @@ import background from '../assets/background.svg';
 				<div class="stat-label">Support Available</div>
 			</div>
 		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<h2>Get In Touch</h2>
+		<p class="contact-subtitle">Ready to transform your vision into reality? Let's build something extraordinary together.</p>
+		
+		<form class="contact-form" id="contactForm">
+			<div class="form-group">
+				<input type="email" id="email" name="email" placeholder="Email Address" required>
+				<label for="email">Email</label>
+			</div>
+			
+			<div class="form-group">
+				<input type="text" id="name" name="name" placeholder="Company or Person Name" required>
+				<label for="name">Company/Name</label>
+			</div>
+			
+			<div class="form-group">
+				<textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+				<label for="message">Message</label>
+			</div>
+			
+			<button type="submit" class="send-button">
+				<span class="button-text">Send Message</span>
+				<span class="button-icon">🚀</span>
+				<div class="button-particles"></div>
+			</button>
+		</form>
 	</section>
 </div>
 
@@ -255,7 +281,7 @@ import background from '../assets/background.svg';
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 		gap: 40px;
 	}
 
@@ -359,6 +385,156 @@ import background from '../assets/background.svg';
 		font-size: 0.9rem;
 	}
 
+	.contact {
+		padding: 100px 0;
+		text-align: center;
+		position: relative;
+	}
+
+	.contact h2 {
+		font-size: 3.5rem;
+		font-weight: 800;
+		margin-bottom: 20px;
+		background: linear-gradient(135deg, #ffffff, #00f5ff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.contact-subtitle {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 60px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact-form {
+		max-width: 600px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.form-group {
+		position: relative;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		width: 100%;
+		padding: 20px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 15px;
+		color: white;
+		font-size: 1rem;
+		backdrop-filter: blur(20px);
+		transition: all 0.3s ease;
+		resize: none;
+	}
+
+	.form-group textarea {
+		min-height: 120px;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #00f5ff;
+		box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+		background: rgba(255, 255, 255, 0.08);
+	}
+
+	.form-group input::placeholder,
+	.form-group textarea::placeholder {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.form-group label {
+		position: absolute;
+		top: -10px;
+		left: 15px;
+		background: #0a0a0a;
+		padding: 0 10px;
+		font-size: 0.9rem;
+		color: #00f5ff;
+		font-weight: 600;
+	}
+
+	.send-button {
+		position: relative;
+		padding: 20px 50px;
+		background: linear-gradient(135deg, #ff0080, #00f5ff, #ffaa00);
+		border: none;
+		border-radius: 50px;
+		color: white;
+		font-size: 1.1rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: all 0.4s ease;
+		overflow: hidden;
+		backdrop-filter: blur(10px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		align-self: center;
+	}
+
+	.send-button:hover {
+		transform: translateY(-5px) scale(1.05);
+		box-shadow: 0 20px 40px rgba(255, 0, 128, 0.4);
+	}
+
+	.send-button:active {
+		transform: translateY(-2px) scale(1.02);
+	}
+
+	.button-text {
+		z-index: 2;
+		position: relative;
+	}
+
+	.button-icon {
+		z-index: 2;
+		position: relative;
+		transition: transform 0.3s ease;
+	}
+
+	.send-button:hover .button-icon {
+		transform: translateX(5px) scale(1.2);
+	}
+
+	.button-particles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		overflow: hidden;
+		border-radius: 50px;
+	}
+
+	.send-button::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transition: left 0.6s;
+		z-index: 1;
+	}
+
+	.send-button:hover::before {
+		left: 100%;
+	}
+
 	.floating-shapes {
 		position: absolute;
 		width: 100%;
@@ -370,6 +546,7 @@ import background from '../assets/background.svg';
 		position: absolute;
 		opacity: 0.1;
 		animation: float 6s ease-in-out infinite;
+		font-size: 2rem;
 	}
 
 	.shape:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
@@ -401,173 +578,185 @@ import background from '../assets/background.svg';
 			padding: 60px 0 100px;
 		}
 		
-		.services, .stats {
+		.services, .stats, .contact {
 			padding: 60px 0;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-	// Three.js Scene Setup
-	let scene, camera, renderer, particles;
-	let mouseX = 0, mouseY = 0;
-	
-	async function loadThreeJS() {
-		// Dynamically import Three.js
-		const THREE = await import('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js');
-		return THREE;
-	}
-	
-	async function init() {
-		const THREE = await loadThreeJS();
-		const container = document.getElementById('canvas-container');
+	// Wait for Three.js to load
+	function initializeScene() {
+		if (typeof THREE === 'undefined') {
+			setTimeout(initializeScene, 100);
+			return;
+		}
+
+		// Three.js Scene Setup
+		let scene, camera, renderer, particles;
+		let mouseX = 0, mouseY = 0;
 		
-		if (!container) return;
-		
-		scene = new THREE.Scene();
-		camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-		renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-		
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		renderer.setClearColor(0x000000, 0);
-		container.appendChild(renderer.domElement);
-		
-		// Create particle system
-		createParticles(THREE);
-		
-		// Create floating geometric shapes
-		createFloatingShapes(THREE);
-		
-		camera.position.z = 50;
-		
-		// Mouse interaction
-		document.addEventListener('mousemove', onMouseMove);
-		window.addEventListener('resize', () => onWindowResize(THREE));
-		
-		animate(THREE);
-	}
-	
-	function createParticles(THREE) {
-		const geometry = new THREE.BufferGeometry();
-		const vertices = [];
-		
-		for (let i = 0; i < 2000; i++) {
-			vertices.push(
-				Math.random() * 200 - 100,
-				Math.random() * 200 - 100,
-				Math.random() * 200 - 100
-			);
+		function init() {
+			const container = document.getElementById('canvas-container');
+			
+			if (!container) return;
+			
+			scene = new THREE.Scene();
+			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+			renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+			
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setClearColor(0x000000, 0);
+			container.appendChild(renderer.domElement);
+			
+			// Create particle system
+			createParticles();
+			
+			// Create floating geometric shapes
+			createFloatingShapes();
+			
+			camera.position.z = 50;
+			
+			// Mouse interaction
+			document.addEventListener('mousemove', onMouseMove);
+			window.addEventListener('resize', onWindowResize);
+			
+			animate();
 		}
 		
-		geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-		
-		const material = new THREE.PointsMaterial({
-			color: 0x00f5ff,
-			size: 0.5,
-			transparent: true,
-			opacity: 0.6,
-			blending: THREE.AdditiveBlending
-		});
-		
-		particles = new THREE.Points(geometry, material);
-		scene.add(particles);
-	}
-	
-	function createFloatingShapes(THREE) {
-		// Create various geometric shapes
-		const geometries = [
-			new THREE.TetrahedronGeometry(2),
-			new THREE.OctahedronGeometry(1.5),
-			new THREE.IcosahedronGeometry(1.8),
-			new THREE.DodecahedronGeometry(1.2)
-		];
-		
-		const materials = [
-			new THREE.MeshBasicMaterial({ 
-				color: 0xff0080, 
-				wireframe: true, 
-				transparent: true, 
-				opacity: 0.3 
-			}),
-			new THREE.MeshBasicMaterial({ 
-				color: 0x00f5ff, 
-				wireframe: true, 
-				transparent: true, 
-				opacity: 0.3 
-			}),
-			new THREE.MeshBasicMaterial({ 
-				color: 0xffaa00, 
-				wireframe: true, 
-				transparent: true, 
-				opacity: 0.3 
-			})
-		];
-		
-		for (let i = 0; i < 15; i++) {
-			const geometry = geometries[Math.floor(Math.random() * geometries.length)];
-			const material = materials[Math.floor(Math.random() * materials.length)];
-			const mesh = new THREE.Mesh(geometry, material);
+		function createParticles() {
+			const geometry = new THREE.BufferGeometry();
+			const vertices = [];
 			
-			mesh.position.set(
-				Math.random() * 100 - 50,
-				Math.random() * 100 - 50,
-				Math.random() * 50 - 25
-			);
-			
-			mesh.rotation.set(
-				Math.random() * Math.PI,
-				Math.random() * Math.PI,
-				Math.random() * Math.PI
-			);
-			
-			mesh.userData = {
-				rotationSpeed: {
-					x: (Math.random() - 0.5) * 0.02,
-					y: (Math.random() - 0.5) * 0.02,
-					z: (Math.random() - 0.5) * 0.02
-				}
-			};
-			
-			scene.add(mesh);
-		}
-	}
-	
-	function onMouseMove(event) {
-		mouseX = (event.clientX - window.innerWidth / 2) * 0.0005;
-		mouseY = (event.clientY - window.innerHeight / 2) * 0.0005;
-	}
-	
-	function onWindowResize(THREE) {
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-		renderer.setSize(window.innerWidth, window.innerHeight);
-	}
-	
-	function animate(THREE) {
-		requestAnimationFrame(() => animate(THREE));
-		
-		// Rotate particles
-		if (particles) {
-			particles.rotation.x += 0.0005;
-			particles.rotation.y += 0.001;
-		}
-		
-		// Mouse interaction with camera
-		camera.position.x += (mouseX * 10 - camera.position.x) * 0.05;
-		camera.position.y += (-mouseY * 10 - camera.position.y) * 0.05;
-		camera.lookAt(scene.position);
-		
-		// Animate geometric shapes
-		scene.traverse((object) => {
-			if (object.userData && object.userData.rotationSpeed) {
-				object.rotation.x += object.userData.rotationSpeed.x;
-				object.rotation.y += object.userData.rotationSpeed.y;
-				object.rotation.z += object.userData.rotationSpeed.z;
+			for (let i = 0; i < 2000; i++) {
+				vertices.push(
+					Math.random() * 200 - 100,
+					Math.random() * 200 - 100,
+					Math.random() * 200 - 100
+				);
 			}
-		});
+			
+			geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+			
+			const material = new THREE.PointsMaterial({
+				color: 0x00f5ff,
+				size: 0.5,
+				transparent: true,
+				opacity: 0.6,
+				blending: THREE.AdditiveBlending
+			});
+			
+			particles = new THREE.Points(geometry, material);
+			scene.add(particles);
+		}
 		
-		renderer.render(scene, camera);
+		function createFloatingShapes() {
+			// Create various geometric shapes
+			const geometries = [
+				new THREE.TetrahedronGeometry(2),
+				new THREE.OctahedronGeometry(1.5),
+				new THREE.IcosahedronGeometry(1.8),
+				new THREE.DodecahedronGeometry(1.2)
+			];
+			
+			const materials = [
+				new THREE.MeshBasicMaterial({ 
+					color: 0xff0080, 
+					wireframe: true, 
+					transparent: true, 
+					opacity: 0.3 
+				}),
+				new THREE.MeshBasicMaterial({ 
+					color: 0x00f5ff, 
+					wireframe: true, 
+					transparent: true, 
+					opacity: 0.3 
+				}),
+				new THREE.MeshBasicMaterial({ 
+					color: 0xffaa00, 
+					wireframe: true, 
+					transparent: true, 
+					opacity: 0.3 
+				})
+			];
+			
+			for (let i = 0; i < 15; i++) {
+				const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+				const material = materials[Math.floor(Math.random() * materials.length)];
+				const mesh = new THREE.Mesh(geometry, material);
+				
+				mesh.position.set(
+					Math.random() * 100 - 50,
+					Math.random() * 100 - 50,
+					Math.random() * 50 - 25
+				);
+				
+				mesh.rotation.set(
+					Math.random() * Math.PI,
+					Math.random() * Math.PI,
+					Math.random() * Math.PI
+				);
+				
+				mesh.userData = {
+					rotationSpeed: {
+						x: (Math.random() - 0.5) * 0.02,
+						y: (Math.random() - 0.5) * 0.02,
+						z: (Math.random() - 0.5) * 0.02
+					}
+				};
+				
+				scene.add(mesh);
+			}
+		}
+		
+		function onMouseMove(event) {
+			mouseX = (event.clientX - window.innerWidth / 2) * 0.0005;
+			mouseY = (event.clientY - window.innerHeight / 2) * 0.0005;
+		}
+		
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
+		
+		function animate() {
+			requestAnimationFrame(animate);
+			
+			// Rotate particles
+			if (particles) {
+				particles.rotation.x += 0.0005;
+				particles.rotation.y += 0.001;
+			}
+			
+			// Mouse interaction with camera
+			camera.position.x += (mouseX * 10 - camera.position.x) * 0.05;
+			camera.position.y += (-mouseY * 10 - camera.position.y) * 0.05;
+			camera.lookAt(scene.position);
+			
+			// Animate geometric shapes
+			scene.traverse((object) => {
+				if (object.userData && object.userData.rotationSpeed) {
+					object.rotation.x += object.userData.rotationSpeed.x;
+					object.rotation.y += object.userData.rotationSpeed.y;
+					object.rotation.z += object.userData.rotationSpeed.z;
+				}
+			});
+			
+			renderer.render(scene, camera);
+		}
+		
+		// Initialize the scene
+		init();
 	}
+
+	// Start initialization
+	initializeScene();
 	
 	// Smooth scrolling for navigation
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -583,8 +772,69 @@ import background from '../assets/background.svg';
 		});
 	});
 	
-	// Initialize Three.js when page loads
-	document.addEventListener('DOMContentLoaded', init);
+	// Contact form submission with cool effect
+	document.getElementById('contactForm').addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		const button = document.querySelector('.send-button');
+		const buttonText = document.querySelector('.button-text');
+		const buttonIcon = document.querySelector('.button-icon');
+		
+		// Cool sending effect
+		button.style.background = 'linear-gradient(135deg, #00f5ff, #ff0080)';
+		buttonText.textContent = 'Sending...';
+		buttonIcon.textContent = '⚡';
+		
+		// Create particle explosion effect
+		createParticleExplosion(button);
+		
+		// Simulate sending (replace with actual form submission)
+		setTimeout(() => {
+			buttonText.textContent = 'Sent!';
+			buttonIcon.textContent = '✨';
+			button.style.background = 'linear-gradient(135deg, #00ff88, #00f5ff)';
+			
+			setTimeout(() => {
+				buttonText.textContent = 'Send Message';
+				buttonIcon.textContent = '🚀';
+				button.style.background = 'linear-gradient(135deg, #ff0080, #00f5ff, #ffaa00)';
+				this.reset();
+			}, 2000);
+		}, 1500);
+	});
+	
+	function createParticleExplosion(element) {
+		const rect = element.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+		
+		for (let i = 0; i < 20; i++) {
+			const particle = document.createElement('div');
+			particle.style.position = 'fixed';
+			particle.style.left = centerX + 'px';
+			particle.style.top = centerY + 'px';
+			particle.style.width = '4px';
+			particle.style.height = '4px';
+			particle.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+			particle.style.borderRadius = '50%';
+			particle.style.pointerEvents = 'none';
+			particle.style.zIndex = '9999';
+			particle.style.transition = 'all 1s ease-out';
+			
+			document.body.appendChild(particle);
+			
+			setTimeout(() => {
+				const angle = (Math.PI * 2 * i) / 20;
+				const distance = 100 + Math.random() * 100;
+				particle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
+				particle.style.opacity = '0';
+			}, 10);
+			
+			setTimeout(() => {
+				document.body.removeChild(particle);
+			}, 1000);
+		}
+	}
 	
 	// Add scroll animations
 	const observerOptions = {
@@ -603,7 +853,7 @@ import background from '../assets/background.svg';
 	
 	// Observe service cards for scroll animations
 	document.addEventListener('DOMContentLoaded', () => {
-		document.querySelectorAll('.service-card, .stat-item').forEach(el => {
+		document.querySelectorAll('.service-card, .stat-item, .contact-form').forEach(el => {
 			el.style.opacity = '0';
 			el.style.transform = 'translateY(20px)';
 			el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
