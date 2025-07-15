@@ -112,11 +112,25 @@
 </div>
 
 <footer>
-	<div class="container">
-		<div class="footer-content">
-			<p>&copy; 2025 NexLabs. Shaping Tomorrow's Technology Today.</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span class="social-icon">🐙</span>
+                    <span class="social-text">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span class="social-icon">💼</span>
+                    <span class="social-text">LinkedIn</span>
+                </a>
+                <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span class="social-icon">📺</span>
+                    <span class="social-text">YouTube</span>
+                </a>
+            </div>
+            <p>&copy; 2025 NexLabs. Shaping Tomorrow's Technology Today.</p>
+        </div>
+    </div>
 </footer>
 
 <style>
@@ -569,6 +583,49 @@
 		color: rgba(255, 255, 255, 0.6);
 	}
 
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+
+	.social-link {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 12px 20px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 50px;
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(20px);
+		font-weight: 500;
+	}
+
+	.social-link:hover {
+		transform: translateY(-3px);
+		background: rgba(255, 255, 255, 0.1);
+		color: #00f5ff;
+		box-shadow: 0 10px 20px rgba(0, 245, 255, 0.2);
+	}
+
+	.social-icon {
+		font-size: 1.2rem;
+		transition: transform 0.3s ease;
+	}
+
+	.social-link:hover .social-icon {
+		transform: scale(1.2);
+	}
+
+	.social-text {
+		font-size: 0.9rem;
+	}
+
 	@media (max-width: 768px) {
 		.nav-links {
 			display: none;
@@ -584,6 +641,18 @@
 
 		.services-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.social-links {
+			gap: 15px;
+		}
+
+		.social-link {
+			padding: 10px 16px;
+		}
+
+		.social-text {
+			font-size: 0.8rem;
 		}
 	}
 </style>
